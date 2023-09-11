@@ -41,13 +41,18 @@ namespace WGBudget.Data.Repositories
                     throw new ArgumentException("Filter does not implement ISimpleFilterTransaction interface.", nameof(filterData));
 
                 var query = string.Concat("SELECT  ID, TransactionDate, Description, Amount, CategoryID, UserID, CreatedAt, ModifiedAt ",
-                    " FROM  BudgetTransactions ",
-                    " WHERE (@TransactionDateSince IS NULL OR TransactionDate >= @TransactionDateSince);",
+                    " FROM  Transaction ",
+                    " WHERE (@UserId IS NULL OR UserId = @UserId);",
+                    " AND (@TransactionDateSince IS NULL OR TransactionDate >= @TransactionDateSince);",
                     " AND (@TransactionDateUntil IS NULL OR TransactionDate <= @TransactionDateUntil);",
                     " AND (@Description IS NULL OR Description LIKE @Description);",
                     " AND (@TransactionCategoryId IS NULL OR CategoryID = @TransactionCategoryId);");
 
                 var queryParameters = new DynamicParameters();
+                if (filter.UserId.HasValue)
+                    queryParameters.Add("@UserId", filter.UserId);
+                else
+                    queryParameters.Add("@UserId", DBNull.Value, DbType.Int32);
                 if (filter.TransactionDateSince.HasValue)
                     queryParameters.Add("@TransactionDateSince", filter.TransactionDateSince);
                 else
@@ -59,7 +64,7 @@ namespace WGBudget.Data.Repositories
                 if (filter.TransactionCategoryId.HasValue)
                     queryParameters.Add("@TransactionCategoryId", filter.TransactionCategoryId);
                 else
-                    queryParameters.Add("@TransactionCategoryId", DBNull.Value, DbType.Date);
+                    queryParameters.Add("@TransactionCategoryId", DBNull.Value, DbType.Int32);
                 if (!String.IsNullOrEmpty(filter.Description))
                     queryParameters.Add("@Description", $"%{filter.Description}%");
                 else
@@ -100,6 +105,7 @@ namespace WGBudget.Data.Repositories
             {
                 using (var conn = Context.CreateConnection())
                 {
+                    data.CreatedAt = DateTime.UtcNow;
                     return (int)conn.Insert<Transaction>(data);
                 }
             }
@@ -115,6 +121,7 @@ namespace WGBudget.Data.Repositories
             {
                 using (var conn = Context.CreateConnection())
                 {
+                    data.ModifiedAt = DateTime.UtcNow;
                     return conn.Update<Transaction>(data);
                 }
             }

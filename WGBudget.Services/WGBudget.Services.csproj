@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\WGBudget.Data\WGBudget.Data.csproj" />
+    <ProjectReference Include="..\WGBudget.Entities\WGBudget.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

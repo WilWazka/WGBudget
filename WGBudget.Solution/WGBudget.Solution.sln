@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WGBudget.Entities", "..\WGBudget.Entities\WGBudget.Entities.csproj", "{1627A563-7A6A-4F9C-A0AA-C845C69701B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WGBudget.Entities", "..\WGBudget.Entities\WGBudget.Entities.csproj", "{1627A563-7A6A-4F9C-A0AA-C845C69701B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WGBudget.Data", "..\WGBudget.Data\WGBudget.Data.csproj", "{BA20A3F8-4B7E-448E-BA65-4EC362FE7FB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WGBudget.Data", "..\WGBudget.Data\WGBudget.Data.csproj", "{BA20A3F8-4B7E-448E-BA65-4EC362FE7FB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WGBudget.Services", "..\WGBudget.Services\WGBudget.Services.csproj", "{E4D84AF5-2E4F-4312-859F-0283B21D294E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WGBudget.WebApi", "..\WGBudget.WebApi\WGBudget.WebApi\WGBudget.WebApi.csproj", "{28162B3D-B6B2-4712-B46D-5C6B80FBC5B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{BA20A3F8-4B7E-448E-BA65-4EC362FE7FB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA20A3F8-4B7E-448E-BA65-4EC362FE7FB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA20A3F8-4B7E-448E-BA65-4EC362FE7FB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4D84AF5-2E4F-4312-859F-0283B21D294E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D84AF5-2E4F-4312-859F-0283B21D294E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D84AF5-2E4F-4312-859F-0283B21D294E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D84AF5-2E4F-4312-859F-0283B21D294E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28162B3D-B6B2-4712-B46D-5C6B80FBC5B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28162B3D-B6B2-4712-B46D-5C6B80FBC5B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28162B3D-B6B2-4712-B46D-5C6B80FBC5B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28162B3D-B6B2-4712-B46D-5C6B80FBC5B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WGBudget.Entities.Data
 {
-    public class Category
+    public partial class Category
     {
         [Key]
         public int ID { get; set; }

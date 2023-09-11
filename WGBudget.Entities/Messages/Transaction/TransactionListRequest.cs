@@ -9,5 +9,6 @@ namespace WGBudget.Entities.Messages.Transaction
         public DateTime? TransactionDateUntil { get; set; }
         public string? Description { get; set; }
         public int? TransactionCategoryId { get; set; }
+        public int? UserId { get; set; }
     }
 }
