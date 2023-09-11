@@ -1,17 +1,14 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace WGBudget.Entities.Data
+namespace WGBudget.Entities.Messages.Transaction
 {
-    public class Transaction
+    public class TransactionDto
     {
-        [Key]
-        public int ID { get; set; }
-        public int UserID { get; set; }
+        public int? ID { get; set; }
         public DateTime TransactionDate { get; set; }
         public string? Description { get; set; }
         public decimal Amount { get; set; }
-        public int CategoryId { get; set; }
+        public int TransactionCategoryId { get; set; }
         public DateTime? CreatedAt { get; set; }
-        public DateTime? ModifiedAt { get; set; }
     }
 }
