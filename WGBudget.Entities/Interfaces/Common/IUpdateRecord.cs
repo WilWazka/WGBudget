@@ -2,6 +2,6 @@
 {
     public interface IUpdateRecord<TData>
     {
-        void Update(TData data);
+        bool Update(TData data);
     }
 }

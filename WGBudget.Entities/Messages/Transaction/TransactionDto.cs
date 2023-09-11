@@ -10,5 +10,7 @@ namespace WGBudget.Entities.Messages.Transaction
         public decimal Amount { get; set; }
         public int TransactionCategoryId { get; set; }
         public DateTime? CreatedAt { get; set; }
+        public int UserID { get; set; }
+
     }
 }

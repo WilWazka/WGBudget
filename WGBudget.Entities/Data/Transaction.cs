@@ -2,7 +2,7 @@
 
 namespace WGBudget.Entities.Data
 {
-    public class Transaction
+    public partial class Transaction
     {
         [Key]
         public int ID { get; set; }
@@ -10,7 +10,7 @@ namespace WGBudget.Entities.Data
         public DateTime TransactionDate { get; set; }
         public string? Description { get; set; }
         public decimal Amount { get; set; }
-        public int CategoryId { get; set; }
+        public int CategoryID { get; set; }
         public DateTime? CreatedAt { get; set; }
         public DateTime? ModifiedAt { get; set; }
     }

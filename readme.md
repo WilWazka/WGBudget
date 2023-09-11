@@ -31,6 +31,7 @@ The plan is to create a web application that allows users to easily manage their
 - NetCore 6
 - DAL-BizLogic separation
 - Dapper
+- FluentMigrator.Runner (for migrations)
 - React/Vue frontend
 TDD as the development approach cannot be fully applied since it could require long time previous to actual dev starting, plus the validation of coverage cannot be assess at this time. 
 
