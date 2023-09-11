@@ -17,7 +17,8 @@ namespace WGBudget.Services
 
         public TransactionService(ITransactionRepository transactionRepo)
         {
-            this.transactionRepository = transactionRepo;
+
+            this.transactionRepository = transactionRepo ?? throw new ArgumentNullException(nameof(transactionRepo));
         }
 
         public async Task<int> CreateTransactionAsync(TransactionCreateRequest request)

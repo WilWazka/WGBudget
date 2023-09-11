@@ -36,3 +36,7 @@ The plan is to create a web application that allows users to easily manage their
 TDD as the development approach cannot be fully applied since it could require long time previous to actual dev starting, plus the validation of coverage cannot be assess at this time. 
 
 > Wilson Guasca - Bogotá, Colombia @ 2023-09
+
+### Notes
+
+> ``Add-Migration InitialMigration -verbose -project WGBudget.Data -StartupProject WGBudget.WebApi``

@@ -14,7 +14,7 @@ namespace WGBudget.Data.Repositories
         private readonly DapperDataContext Context;
         public TransactionCategoryRepository(DapperDataContext context_)
         {
-            this.Context = context_;
+            this.Context = context_ ?? throw new ArgumentNullException("Context instance cannot be null.");
         }
 
         public bool Delete(Category data)
